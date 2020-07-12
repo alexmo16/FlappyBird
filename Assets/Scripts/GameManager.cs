@@ -6,6 +6,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager m_instance = null;
 
+    private MapGenerator m_mapGenerator;
+
     private void Awake()
     {
         if (m_instance == null)
@@ -17,10 +19,7 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
         DontDestroyOnLoad(gameObject);
-    }
-
-    private void Start()
-    {
-        Debug.Log("test test");
+        m_mapGenerator = GetComponent<MapGenerator>();
+        m_mapGenerator.Build();
     }
 }
