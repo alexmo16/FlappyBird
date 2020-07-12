@@ -53,7 +53,6 @@ public class MapGenerator : MonoBehaviour
                 }
             }
             counter++;
-            Debug.Log(counter);
         }
     }
 }
