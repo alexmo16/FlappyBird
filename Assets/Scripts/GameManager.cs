@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
         DontDestroyOnLoad(gameObject);
         m_mapGenerator = GetComponent<MapGenerator>();
         m_mapGenerator.Build();
