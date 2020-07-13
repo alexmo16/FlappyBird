@@ -56,12 +56,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33de93463f7ec9449a128b6ffe635951, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_columns: 40
-  m_rows: 20
   m_dirtTile: {fileID: 8488062176266325107, guid: 9194aa9acdcad6b4e807f31f15821967,
     type: 3}
   m_dirtMaxLevel: 1
   m_groundTile: {fileID: 1217563635751308067, guid: fd6abb3a62e9ef84096415af360c0c3c,
     type: 3}
-  m_smallPipeTile: {fileID: 994826739983079195, guid: 472ab2013f231884eb7a3908ff38cfa8,
+  m_smallPipeTile: {fileID: 9100229399924879013, guid: 5f50656001327c545a0d21fbed49123c,
     type: 3}
