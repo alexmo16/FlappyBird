@@ -5,9 +5,7 @@ using UnityEngine.UI;
 
 public class FpsCounter : MonoBehaviour
 {
-    [SerializeField]
     private Text m_fpsText;
-
     private float m_deltaTime = 0f;
 
     void Awake()
@@ -16,6 +14,8 @@ public class FpsCounter : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        m_fpsText = GetComponent<Text>();
     }
 
     // Update is called once per frame
