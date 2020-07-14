@@ -11,6 +11,15 @@ TextureImporter:
   - first:
       213: -3351183978942599623
     second: Tunel_2
+  - first:
+      213: 1304208510633726333
+    second: Pipe_0
+  - first:
+      213: 6754015500072955358
+    second: Pipe_1
+  - first:
+      213: 5565319975860587716
+    second: Pipe_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -108,7 +117,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tunel_0
+      name: Pipe_0
       rect:
         serializedVersion: 2
         x: 0
@@ -116,20 +125,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9f3fd6a910195ca30800000000000000
-      internalID: 4234950460683711481
+      spriteID: d715d5dfaba791210800000000000000
+      internalID: 1304208510633726333
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tunel_1
+      name: Pipe_1
       rect:
         serializedVersion: 2
         x: 16
@@ -137,20 +146,20 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3f884f44eab297310800000000000000
-      internalID: 1403200786383800563
+      spriteID: edda45120551bbd50800000000000000
+      internalID: 6754015500072955358
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tunel_2
+      name: Pipe_2
       rect:
         serializedVersion: 2
         x: 32
@@ -158,14 +167,14 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 93e652e2de33e71d0800000000000000
-      internalID: -3351183978942599623
+      spriteID: 4cc4e8e180dfb3d40800000000000000
+      internalID: 5565319975860587716
       vertices: []
       indices: 
       edges: []
