@@ -11,6 +11,8 @@ public class Player : MonoBehaviour
     private void Start()
     {
         m_rb = GetComponent<Rigidbody2D>();
+
+        m_rb.velocity = Vector2.one * m_velocity;
     }
 
     void Update()
@@ -19,5 +21,14 @@ public class Player : MonoBehaviour
         {
             m_rb.velocity = Vector2.one * m_velocity;
         }
+
+        float angle = Vector3.Angle(Vector3.right, m_rb.velocity);
+
+        if (m_rb.velocity.y < 0)
+        {
+            angle = -angle;
+        }
+
+        transform.eulerAngles = new Vector3(0, 0, angle);
     }
 }
