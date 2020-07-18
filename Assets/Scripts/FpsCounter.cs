@@ -8,7 +8,7 @@ public class FpsCounter : MonoBehaviour
     private Text m_fpsText;
     private float m_deltaTime = 0f;
 
-    void Awake()
+    private void Awake()
     {
         if (!Debug.isDebugBuild)
         {
@@ -19,7 +19,7 @@ public class FpsCounter : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         m_deltaTime += (Time.deltaTime - m_deltaTime) * 0.1f;
         float fps = 1.0f / m_deltaTime;
