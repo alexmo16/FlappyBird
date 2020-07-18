@@ -31,4 +31,9 @@ public class Player : MonoBehaviour
 
         transform.eulerAngles = new Vector3(0, 0, angle);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision_)
+    {
+        GameManager.m_instance.RestartGame();
+    }
 }

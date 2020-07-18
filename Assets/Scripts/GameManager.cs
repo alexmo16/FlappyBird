@@ -23,4 +23,20 @@ public class GameManager : MonoBehaviour
         m_mapGenerator = GetComponent<MapGenerator>();
         m_mapGenerator.Build();
     }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
+    static private void InitializationCallback()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    static private void OnSceneLoaded(Scene arg0_, LoadSceneMode arg1_)
+    {
+        m_instance.m_mapGenerator.Build();
+    }
 }
