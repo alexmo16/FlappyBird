@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 public class GameManager : MonoBehaviour
 {
     public static GameManager m_instance = null;
@@ -11,6 +13,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject m_startMenuPrefab = null;
     private GameObject m_startMenuInstance = null;
+
+    private bool m_isPaused = true;
 
     private void Awake()
     {
@@ -33,13 +37,18 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
         m_startMenuInstance = GameObject.Find(m_startMenuPrefab.name);
         m_startMenuInstance.SetActive(true);
+
         m_mapGenerator.Build();
     }
 
+    //Must use the instance in this function
+    //Because it's use like a static function by the play button.
+    //It's weird because I cannot set this function static.
     public void OnStartButtonClicked()
     {
         m_instance.m_startMenuInstance.SetActive(false);
         Time.timeScale = 1;
+        m_instance.m_isPaused = false;
     }
 
     public void RestartGame()
@@ -56,5 +65,10 @@ public class GameManager : MonoBehaviour
     static private void OnSceneLoaded(Scene arg0_, LoadSceneMode arg1_)
     {
         m_instance.InitGame();
+    }
+
+    public bool IsPausedGet()
+    {
+        return m_isPaused;
     }
 }
