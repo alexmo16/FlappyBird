@@ -8,6 +8,10 @@ public class GameManager : MonoBehaviour
 
     private MapGenerator m_mapGenerator;
 
+    [SerializeField]
+    private GameObject m_startMenuPrefab = null;
+    private GameObject m_startMenuInstance = null;
+
     private void Awake()
     {
         if (m_instance == null)
@@ -21,7 +25,21 @@ public class GameManager : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
         m_mapGenerator = GetComponent<MapGenerator>();
+        InitGame();
+    }
+
+    private void InitGame()
+    {
+        Time.timeScale = 0;
+        m_startMenuInstance = GameObject.Find(m_startMenuPrefab.name);
+        m_startMenuInstance.SetActive(true);
         m_mapGenerator.Build();
+    }
+
+    public void OnStartButtonClicked()
+    {
+        m_instance.m_startMenuInstance.SetActive(false);
+        Time.timeScale = 1;
     }
 
     public void RestartGame()
@@ -37,6 +55,6 @@ public class GameManager : MonoBehaviour
 
     static private void OnSceneLoaded(Scene arg0_, LoadSceneMode arg1_)
     {
-        m_instance.m_mapGenerator.Build();
+        m_instance.InitGame();
     }
 }
