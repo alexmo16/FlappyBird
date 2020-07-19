@@ -19,6 +19,9 @@ public class Player : MonoBehaviour
 
     private Animator m_animator;
 
+    [SerializeField]
+    private AudioClip m_pointSound = null;
+
     public int PointsGet()
     {
         return m_points;
@@ -68,7 +71,11 @@ public class Player : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        ++m_points;
-        m_pointsRenderer.PointsSet(m_points);
+        if (true)
+        {
+            ++m_points;
+            m_pointsRenderer.PointsSet(m_points);
+            SoundManager.m_instance.PlaySingle(m_pointSound, 0.9f);
+        }
     }
 }
