@@ -14,6 +14,8 @@ public class GameManager : MonoBehaviour
 
     private bool m_isPaused = true;
 
+    private PipeSpawner m_pipeSpawner;
+
     //Must use the instance in this function
     //Because it's use like a static function by the play button.
     //It's weird because I cannot set this function static.
@@ -46,14 +48,15 @@ public class GameManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(gameObject);
+        m_pipeSpawner = GetComponent<PipeSpawner>();
         InitGame();
     }
 
     private void InitGame()
     {
-        Time.timeScale = 0;
         m_startMenuInstance = GameObject.Find(m_startMenuPrefab.name);
         m_startMenuInstance.SetActive(true);
+        Time.timeScale = 0;
     }
 
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
