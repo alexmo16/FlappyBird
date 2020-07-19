@@ -54,6 +54,7 @@ public class GameManager : MonoBehaviour
 
     private void InitGame()
     {
+        m_isPaused = true;
         m_startMenuInstance = GameObject.Find(m_startMenuPrefab.name);
         m_startMenuInstance.SetActive(true);
         Time.timeScale = 0;

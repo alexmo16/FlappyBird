@@ -7,24 +7,27 @@ public class PointsRenderer : MonoBehaviour
 {
     private Text m_PointsText;
 
-    void Awake()
+    public void PointsSet(int points_)
+    {
+        m_PointsText.text = points_.ToString();
+    }
+
+    private void Awake()
     {
         m_PointsText = GetComponent<Text>();
         m_PointsText.text = "";
+    }
+
+    private void Start()
+    {
         m_PointsText.enabled = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (!GameManager.m_instance.IsPausedGet() && !m_PointsText.IsActive())
         {
             m_PointsText.enabled = true;
         }
-    }
-
-    public void PointsSet(int points_)
-    {
-        m_PointsText.text = points_.ToString();
     }
 }
