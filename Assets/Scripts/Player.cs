@@ -29,6 +29,7 @@ public class Player : MonoBehaviour
         m_rb.velocity = m_velocityVector * m_velocity;
         m_angleVector = Vector3.one * m_velocity;
         m_pointsRenderer = m_pointsTextInstance.GetComponent<PointsRenderer>();
+        m_pointsRenderer.PointsSet(m_points);
     }
 
     private void Update()
@@ -37,7 +38,6 @@ public class Player : MonoBehaviour
         {
             m_rb.velocity = m_velocityVector * m_velocity;
             m_angleVector = Vector3.one * m_velocity;
-            ++m_points;
         }
         else
         {
@@ -51,11 +51,16 @@ public class Player : MonoBehaviour
         }
 
         transform.eulerAngles = new Vector3(0, 0, angle);
-        m_pointsRenderer.PointsSet(m_points);
     }
 
     private void OnCollisionEnter2D(Collision2D collision_)
     {
         GameManager.m_instance.RestartGame();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        ++m_points;
+        m_pointsRenderer.PointsSet(m_points);
     }
 }
