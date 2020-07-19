@@ -62,5 +62,5 @@ MonoBehaviour:
   m_spawnPositionY: 6
   m_pipePrefab: {fileID: 5362580448421274185, guid: 5f8f0e8a7d6b8ca41bff7a2b6d30b2ae,
     type: 3}
-  m_maxTime: 1.5
+  m_maxTime: 1
   m_heightVariant: 1

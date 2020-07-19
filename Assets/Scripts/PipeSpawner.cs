@@ -11,7 +11,7 @@ public class PipeSpawner : MonoBehaviour
     [SerializeField]
     private GameObject m_pipePrefab = null;
     [SerializeField]
-    private float m_maxTime = 1f;
+    private float m_spawnTime = 1f;
     [SerializeField]
     private float m_heightVariant = 0f;
 
@@ -25,7 +25,8 @@ public class PipeSpawner : MonoBehaviour
 
     private void Update()
     {
-        if (m_timer > m_maxTime)
+        //TODO: change spawnTime value depending on player's points.
+        if (m_timer > m_spawnTime)
         {
             Spawn();
             m_timer = 0;
