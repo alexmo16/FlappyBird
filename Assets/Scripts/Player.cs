@@ -17,9 +17,16 @@ public class Player : MonoBehaviour
     private GameObject m_pointsTextInstance = null;
     private PointsRenderer m_pointsRenderer;
 
+    private Animator m_animator;
+
     public int PointsGet()
     {
         return m_points;
+    }
+
+    private void Awake()
+    {
+        m_animator = GetComponent<Animator>();
     }
 
     private void Start()
@@ -38,6 +45,7 @@ public class Player : MonoBehaviour
         {
             m_rb.velocity = m_velocityVector * m_velocity;
             m_angleVector = Vector3.one * m_velocity;
+            m_animator.SetTrigger("PlayerFly");
         }
         else
         {
