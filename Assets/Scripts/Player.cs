@@ -66,7 +66,7 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision_)
     {
-        GameManager.m_instance.RestartGame();
+        GameManager.m_instance.RestartGame(m_points);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

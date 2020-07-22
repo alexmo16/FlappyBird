@@ -25,7 +25,7 @@ public class PointsRenderer : MonoBehaviour
 
     private void Update()
     {
-        if (!GameManager.m_instance.IsPausedGet() && !m_PointsText.IsActive())
+        if (!m_PointsText.IsActive())
         {
             m_PointsText.enabled = true;
         }

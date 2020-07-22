@@ -46,6 +46,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_startMenuPrefab: {fileID: 2070413824824481293, guid: 7e6a684c6e29ec946ad6d01ddb34c964,
     type: 3}
+  m_gameOverCanvasPrefab: {fileID: 6968732974608566451, guid: 2c471c87937c473418371ceca1a37db3,
+    type: 3}
+  m_inGameCanvasPrefab: {fileID: 3905775124941301665, guid: a6fe4b6c3781bfb43aa1f4c2ba1c09f4,
+    type: 3}
 --- !u!114 &8180609238139732856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,5 +66,5 @@ MonoBehaviour:
   m_spawnPositionY: 6
   m_pipePrefab: {fileID: 5362580448421274185, guid: 5f8f0e8a7d6b8ca41bff7a2b6d30b2ae,
     type: 3}
-  m_maxTime: 1
+  m_spawnTime: 1
   m_heightVariant: 1
